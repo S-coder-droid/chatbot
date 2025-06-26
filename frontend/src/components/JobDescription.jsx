@@ -13,7 +13,7 @@ const JobDescription = () => {
     const {user} = useSelector(store=>store.auth);
     const isIntiallyApplied = singleJob?.applications?.some(application => application.applicant === user?._id) || false;
     const [isApplied, setIsApplied] = useState(isIntiallyApplied);
-
+   
     const params = useParams();
     const jobId = params.id;
     const dispatch = useDispatch();
